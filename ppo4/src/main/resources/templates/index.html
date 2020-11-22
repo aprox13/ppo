@@ -1,0 +1,49 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/index.css">
+    <title>Hello, world!</title>
+</head>
+<body>
+
+
+<form action="/list" method="POST" th:action="@{/list}" th:object="${newList}">
+
+</form>
+
+<form action="#" method="POST" th:action="@{/task/add}" th:object="${task}" >
+    <input type="text" placeholder="Name" th:field="*{task}">
+    <p><input type="submit" value="Submit" /></p>
+</form>
+
+<th:block th:each="list : ${lists}">
+    <table>
+        <tr>
+            <td th:text="${list.getName()}" colspan="6"></td>
+        </tr>
+        <tr>
+            <td colspan="6">
+
+                <form method="POST" th:action="@{/task/add}" th:object="${task}" >
+                    <input type="text" placeholder="Name" th:field="*{task}">
+                    <p><input type="submit" value="Submit" /></p>
+                </form>
+
+            </td>
+        </tr>
+
+        <th:block th:each="task : ${list.getTasks()}">
+            <tr>
+                <td th:text="${task.getTask()}" colspan="5"></td>
+                <td colspan="1"><label><input type="checkbox" checked> Выполнено</label></td>
+            </tr>
+        </th:block>
+    </table>
+</th:block>
+
+</body>
+</html>
