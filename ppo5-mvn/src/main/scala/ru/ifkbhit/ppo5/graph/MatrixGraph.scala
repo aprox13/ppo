@@ -11,11 +11,12 @@ import scala.collection.JavaConverters._
 
 class MatrixGraph(matrix: Seq[Seq[Int]], override val drawingApi: DrawingApi, override val graphRadius: Int) extends Graph {
 
-    matrix.zipWithIndex.foreach {
-      case (row, idx) =>
-        require(row.size == matrix.size,
-          s"Expected quad matrix. Found matrix size: ${matrix.size} and row #${idx + 1} with size: ${row.size}")
-    }
+  matrix.zipWithIndex.foreach {
+    case (row, idx) =>
+      require(row.size == matrix.size,
+        s"Expected quad matrix. Found matrix size: ${matrix.size} and row #${idx + 1} with size: ${row.size}"
+      )
+  }
 
 
   override protected def vertices: Set[Vertex] =
@@ -27,7 +28,7 @@ class MatrixGraph(matrix: Seq[Seq[Int]], override val drawingApi: DrawingApi, ov
         row.zipWithIndex.flatMap {
           case (NoEdge, _) =>
             None
-          case (_, j)=>
+          case (_, j) =>
             Some(Edge(Vertex(i), Vertex(j)))
         }
     }.toSet

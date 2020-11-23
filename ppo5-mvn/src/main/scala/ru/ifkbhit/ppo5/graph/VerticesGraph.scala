@@ -30,7 +30,7 @@ object VerticesGraph {
 
 
   def apply(file: File, drawingApi: DrawingApi, graphRadius: Int): VerticesGraph = {
-    val lines: Seq[String] = Files.readAllLines(file.toPath).asScala.toSeq
+    val lines: Seq[String] = Files.readAllLines(file.toPath).asScala
       .filter(_.nonEmpty)
     val n = lines.headOption.flatMap(Utils.parseIntSafe)
       .getOrElse(throw new RuntimeException(s"Expected count at first line, found ${lines.headOption.getOrElse("EMPTY_STRING")}"))

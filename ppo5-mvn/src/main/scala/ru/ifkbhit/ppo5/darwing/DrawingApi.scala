@@ -11,10 +11,13 @@ trait DrawingApi {
    * @param radius радиус круга
    */
   def drawCircle(center: Point, radius: Float, color: RGBColor = DeepPurple): Unit
+
   def drawSegment(p1: Point, p2: Point, color: RGBColor = Grey): Unit
+
   def drawArrow(p1: Point, p2: Point, color: RGBColor = Grey): Unit
 
   def getCanvasWidth: Int
+
   def getCanvasHeight: Int
 
   def getCenterPoint: Point = Point(getCanvasWidth / 2, getCanvasHeight / 2)

@@ -3,7 +3,7 @@ package ru.ifkbhit.ppo5.graph
 import ru.ifkbhit.ppo5.darwing.RGBColor.{BlueGrey, DeepPurple, Teal}
 import ru.ifkbhit.ppo5.darwing.{DrawingApi, RGBColor}
 
-class FullGraph(size: Int, override val drawingApi: DrawingApi, override val graphRadius: Int) extends Graph {
+case class FullGraph(size: Int, override val drawingApi: DrawingApi, override val graphRadius: Int) extends Graph {
   override protected def vertices: Set[Vertex] =
     (1 to size).map(Vertex).toSet
 
