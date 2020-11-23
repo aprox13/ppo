@@ -1,89 +1,68 @@
 package ru.ifkbhit.ppo4.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import ru.ifkbhit.ppo4.dao.TaskDao;
 import ru.ifkbhit.ppo4.model.Task;
 import ru.ifkbhit.ppo4.model.TaskList;
-import ru.ifkbhit.ppo4.repo.TaskListRepository;
-import ru.ifkbhit.ppo4.repo.TaskRepository;
 
 @Controller
 public class TasksController {
 
-    @Autowired
-    TaskListRepository taskListRepository;
+    final
+    TaskDao taskDao;
 
-    @Autowired
-    TaskRepository taskRepository;
-
-    @GetMapping("/lists")
-    @ResponseBody
-    public Iterable<TaskList> tasks(Model model) {
-        return taskListRepository.findAll();
-    }
-
-    @GetMapping("/tasks")
-    @ResponseBody
-    public Iterable<Task> lists(Model model) {
-        return taskRepository.findAll();
-    }
-
-    @GetMapping("/list/new")
-    @ResponseBody
-    public void newList(Model model) {
-        TaskList tl = new TaskList();
-
-        tl.setName(String.valueOf(System.currentTimeMillis()));
-        taskListRepository.save(tl);
-    }
-
-    @GetMapping("/task/new")
-    @ResponseBody
-    public void newTask(@ModelAttribute("tl") Long listId, Model model) {
-        Task t = new Task();
-
-        t.setTask("task for " + listId);
-        TaskList tl = taskListRepository.findById(listId).orElse(null);
-
-
-        t.setTaskList(tl);
-        taskRepository.save(t);
+    public TasksController(TaskDao taskDao) {
+        this.taskDao = taskDao;
     }
 
 
-//    @PatchMapping("/api/task/done")
-//    public void setDone(@RequestBody Task task) {
-//        taskDao.setDone(task);
-//    }
-//
-//    @DeleteMapping("/api/task/delete")
-//    @ResponseBody
-//    public void deleteTask(@RequestBody Task task) {
-//        taskDao.deleteTask(task.getId());
-//    }
-//
-//
-//    @DeleteMapping("/api/list/delete")
-//    @ResponseBody
-//    public void deleteList(@RequestBody TaskList list) {
-//        taskDao.deleteTaskList(list.getId());
-//    }
-//
-//    @PostMapping("/task")
-//    public String addTask(@RequestBody Task task) {
-//        taskDao.addTask(task);
-//
-//        return "redirect:/tasks";
-//    }
-//
-//    @PostMapping("/list")
-//    public String addList(@ModelAttribute TaskList newList, BindingResult errors, Model model) {
-//        taskDao.addList(newList);
-//
-//        return "redirect:/tasks";
-//    }
+    @GetMapping(value = "/lists")
+    public String lists(ModelMap map) {
+        map.addAttribute("lists", taskDao.getLists());
+        map.addAttribute("newTaskList", new TaskList());
+        map.addAttribute("deleteTaskListId", -1L);
+        map.addAttribute("newTask", new Task());
+        return "index";
+    }
+
+    @PostMapping("/list-add")
+    public String addList(@ModelAttribute("newTaskList") TaskList list) {
+        taskDao.addList(list);
+        return "redirect:/lists";
+    }
+
+    @PostMapping("/list/{id}/delete")
+    public String listDelete(@PathVariable("id") Long id) {
+        taskDao.deleteTaskList(id);
+        return "redirect:/lists";
+    }
+
+    @PostMapping("/list/{id}/add-task")
+    public String taskAdd(@PathVariable("id") Long listId, @ModelAttribute("newTask") Task task) {
+        task.setTaskListId(listId);
+        task.setDone(false);
+        taskDao.addTask(task);
+        return "redirect:/lists";
+    }
+
+    @PostMapping("/task/{id}/toggle")
+    public String toggleTask(@PathVariable("id") Long taskId) {
+        Task task = taskDao.getTask(taskId);
+        if (task != null) {
+            task.setDone(!task.isDone());
+            taskDao.setDone(task);
+        }
+        return "redirect:/lists";
+    }
+
+    @PostMapping("/task/{id}/delete")
+    public String deleteTask(@PathVariable("id") Long taskId) {
+        taskDao.deleteTask(taskId);
+        return "redirect:/lists";
+    }
 }

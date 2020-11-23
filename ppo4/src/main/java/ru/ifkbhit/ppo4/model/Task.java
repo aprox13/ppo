@@ -1,50 +1,52 @@
 package ru.ifkbhit.ppo4.model;
 
-import com.sun.istack.NotNull;
-import org.springframework.lang.NonNull;
 
-import javax.persistence.*;
-
-@Entity
 public class Task {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    @NonNull
-    private long id;
-
-    @NonNull
     private String task;
-
-    @NonNull
     private boolean done;
-
-    @NotNull
-    @ManyToOne(cascade = CascadeType.ALL)
+    private Long id;
     private Long taskListId;
 
-    public long getId() {
-        return id;
-    }
-
-    @NonNull
     public String getTask() {
         return task;
+    }
+
+    public void setTask(String task) {
+        this.task = task;
     }
 
     public boolean isDone() {
         return done;
     }
 
-    public TaskList getTaskList() {
-        return taskList;
+    public void setDone(boolean done) {
+        this.done = done;
     }
 
-    public void setTask(@NonNull String task) {
-        this.task = task;
+    public Long getId() {
+        return id;
     }
 
-    public void setTaskList(TaskList taskList) {
-        this.taskList = taskList;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getTaskListId() {
+        return taskListId;
+    }
+
+    public void setTaskListId(Long taskListId) {
+        this.taskListId = taskListId;
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "task='" + task + '\'' +
+                ", done=" + done +
+                ", id=" + id +
+                ", taskListId=" + taskListId +
+                '}';
     }
 }

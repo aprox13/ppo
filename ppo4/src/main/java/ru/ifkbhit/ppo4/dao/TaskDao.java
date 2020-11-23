@@ -8,6 +8,8 @@ import java.util.List;
 public interface TaskDao {
     void setDone(Task task);
 
+    Task getTask(Long id);
+
     void deleteTask(long id);
 
     void deleteTaskList(long id);

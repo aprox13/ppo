@@ -1,0 +1,136 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(reload, None, None)[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(sbtStashOnFailure, None, None)[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(onFailure loadFailed, None, None)[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(loadp, None, None)[0m[0J
+[0m[[0m[0minfo[0m] [0m[0mwelcome to sbt 1.4.0 (Eclipse OpenJ9 Java 1.8.0_222)[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: plugins took 15.502577ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: defsScala took 0.005326ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory /Users/ifkbhit/.sbt/1.0/plugins[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /Users/ifkbhit/.sbt/1.0/plugins, returning: ()[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 1.946727 ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m          Load.resolveProject(global-plugins) took 7.275146ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m        Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /Users/ifkbhit/.sbt/1.0/plugins, plugins: List(<none>))) took 9.713494ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /Users/ifkbhit/.sbt/1.0/plugins, returning: (global-plugins)[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: loadedProjectsRaw took 10.680534ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: cleanEvalClasses took 0.023791ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit(file:/Users/ifkbhit/.sbt/1.0/plugins/, ...) took 26.762154ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: load took 27.771879ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: resolveProjects took 0.073529ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: finalTransforms took 11.849448ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: config.delegates took 0.33252ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: Def.make(settings)... took 97.148134ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: structureIndex took 49.47965ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: mkStreams took 0.005521ms[0m[0J
+[0m[[0m[0minfo[0m] [0m[0mloading global plugins from /Users/ifkbhit/.sbt/1.0/plugins[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mLoad.defaultLoad until apply took 695.191852ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: plugins took 29.327578ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: defsScala took 0.007065ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory /Users/ifkbhit/itmo/ppo/lab5/project[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m            Load.loadUnit: mkEval took 0.296152ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /Users/ifkbhit/itmo/ppo/lab5/project, returning: ()[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 1.446859 ms[0m[0J
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project lab5-build from build.sbt,idea.sbt ...[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m              Load.resolveProject(lab5-build) took 1.782168ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m            Load.loadTransitive: finalizeProject(Project(id lab5-build, base: /Users/ifkbhit/itmo/ppo/lab5/project, plugins: List(<none>))) took 3.63727ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /Users/ifkbhit/itmo/ppo/lab5/project, returning: (lab5-build)[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: loadedProjectsRaw took 980.114098ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: cleanEvalClasses took 1.933327ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m        Load.loadUnit(file:/Users/ifkbhit/itmo/ppo/lab5/project/, ...) took 1012.000286ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: load took 1012.92057ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: resolveProjects took 0.094194ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: finalTransforms took 8.603385ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: config.delegates took 0.310128ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: Def.make(settings)... took 58.853555ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: structureIndex took 20.641069ms[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: mkStreams took 0.004638ms[0m[0J
+[0m[[0m[0minfo[0m] [0m[0mloading project definition from /Users/ifkbhit/itmo/ppo/lab5/project[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m	Note: Some unresolved dependencies have extra attributes.  Check that these dependencies exist with the requested attributes.[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m		com.lihaoyi:workbench:0.3.0 (sbtVersion=1.0, scalaVersion=2.12)[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m		org.scala-js:sbt-scalajs:0.6.13 (sbtVersion=1.0, scalaVersion=2.12)[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m	Note: Unresolved dependencies path:[0m[0J
+[0m[[0m[31merror[0m] [0m[0msbt.librarymanagement.ResolveException: Error downloading com.lihaoyi:workbench;sbtVersion=1.0;scalaVersion=2.12:0.3.0[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  Not found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  Not found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo1.maven.org/maven2/com/lihaoyi/workbench_2.12_1.0/0.3.0/workbench-0.3.0.pom[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: /Users/ifkbhit/.ivy2/local/com.lihaoyi/workbench/scala_2.12/sbt_1.0/0.3.0/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: /Users/ifkbhit/Library/Application%20Support/JetBrains/IntelliJIdea2020.1/plugins/Scala/repo/com.lihaoyi/workbench/scala_2.12/sbt_1.0/0.3.0/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.lihaoyi/workbench/scala_2.12/sbt_1.0/0.3.0/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo.typesafe.com/typesafe/ivy-releases/com.lihaoyi/workbench/scala_2.12/sbt_1.0/0.3.0/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0mError downloading org.scala-js:sbt-scalajs;sbtVersion=1.0;scalaVersion=2.12:0.6.13[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  Not found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  Not found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo1.maven.org/maven2/org/scala-js/sbt-scalajs_2.12_1.0/0.6.13/sbt-scalajs-0.6.13.pom[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: /Users/ifkbhit/.ivy2/local/org.scala-js/sbt-scalajs/scala_2.12/sbt_1.0/0.6.13/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: /Users/ifkbhit/Library/Application%20Support/JetBrains/IntelliJIdea2020.1/plugins/Scala/repo/org.scala-js/sbt-scalajs/scala_2.12/sbt_1.0/0.6.13/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-js/sbt-scalajs/scala_2.12/sbt_1.0/0.6.13/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo.typesafe.com/typesafe/ivy-releases/org.scala-js/sbt-scalajs/scala_2.12/sbt_1.0/0.6.13/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:258)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at lmcoursier.CoursierDependencyResolution.$anonfun$update$38(CoursierDependencyResolution.scala:227)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at lmcoursier.CoursierDependencyResolution$$Lambda$4532.000000008A442620.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.Either$LeftProjection.map(Either.scala:573)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:227)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:53)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:103)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$$$Lambda$2955.0000000088BF9620.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:73)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.util.Tracked$$$Lambda$2886.000000008C892C20.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:116)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$$$Lambda$2957.0000000088C01020.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.control.Exception$Catch.apply(Exception.scala:228)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:116)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:97)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$$$Lambda$2951.0000000088531A20.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:219)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.util.Tracked$$$Lambda$2712.000000008B8C4820.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:130)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Classpaths$.$anonfun$updateTask0$5(Defaults.scala:3440)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Classpaths$$$Lambda$479.00000000889C1420.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function1$$Lambda$211.000000008A21FA20.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.$tilde$greater$$Lambda$2550.0000000088502E20.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute$$Lambda$2575.0000000088BCEE20.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.work(Execute.scala:291)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute$$Lambda$2560.000000008A395620.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4$$Lambda$2573.000000008850A020.apply(Unknown Source)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.FutureTask.run(FutureTask.java:266)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.FutureTask.run(FutureTask.java:266)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m	at java.lang.Thread.run(Thread.java:819)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m([31mupdate[0m) sbt.librarymanagement.ResolveException: Error downloading com.lihaoyi:workbench;sbtVersion=1.0;scalaVersion=2.12:0.3.0[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  Not found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  Not found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo1.maven.org/maven2/com/lihaoyi/workbench_2.12_1.0/0.3.0/workbench-0.3.0.pom[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: /Users/ifkbhit/.ivy2/local/com.lihaoyi/workbench/scala_2.12/sbt_1.0/0.3.0/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: /Users/ifkbhit/Library/Application%20Support/JetBrains/IntelliJIdea2020.1/plugins/Scala/repo/com.lihaoyi/workbench/scala_2.12/sbt_1.0/0.3.0/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.lihaoyi/workbench/scala_2.12/sbt_1.0/0.3.0/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo.typesafe.com/typesafe/ivy-releases/com.lihaoyi/workbench/scala_2.12/sbt_1.0/0.3.0/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0mError downloading org.scala-js:sbt-scalajs;sbtVersion=1.0;scalaVersion=2.12:0.6.13[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  Not found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  Not found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo1.maven.org/maven2/org/scala-js/sbt-scalajs_2.12_1.0/0.6.13/sbt-scalajs-0.6.13.pom[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: /Users/ifkbhit/.ivy2/local/org.scala-js/sbt-scalajs/scala_2.12/sbt_1.0/0.6.13/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: /Users/ifkbhit/Library/Application%20Support/JetBrains/IntelliJIdea2020.1/plugins/Scala/repo/org.scala-js/sbt-scalajs/scala_2.12/sbt_1.0/0.6.13/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-js/sbt-scalajs/scala_2.12/sbt_1.0/0.6.13/ivys/ivy.xml[0m[0J
+[0m[[0m[31merror[0m] [0m[0m  not found: https://repo.typesafe.com/typesafe/ivy-releases/org.scala-js/sbt-scalajs/scala_2.12/sbt_1.0/0.6.13/ivys/ivy.xml[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(loadFailed, None, None)[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0mProject loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)[0m[0J

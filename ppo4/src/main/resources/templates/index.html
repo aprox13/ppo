@@ -9,41 +9,52 @@
     <title>Hello, world!</title>
 </head>
 <body>
-
-
-<form action="/list" method="POST" th:action="@{/list}" th:object="${newList}">
-
-</form>
-
-<form action="#" method="POST" th:action="@{/task/add}" th:object="${task}" >
-    <input type="text" placeholder="Name" th:field="*{task}">
-    <p><input type="submit" value="Submit" /></p>
-</form>
-
 <th:block th:each="list : ${lists}">
     <table>
         <tr>
             <td th:text="${list.getName()}" colspan="6"></td>
         </tr>
-        <tr>
-            <td colspan="6">
-
-                <form method="POST" th:action="@{/task/add}" th:object="${task}" >
-                    <input type="text" placeholder="Name" th:field="*{task}">
-                    <p><input type="submit" value="Submit" /></p>
-                </form>
-
-            </td>
-        </tr>
 
         <th:block th:each="task : ${list.getTasks()}">
             <tr>
-                <td th:text="${task.getTask()}" colspan="5"></td>
-                <td colspan="1"><label><input type="checkbox" checked> Выполнено</label></td>
+                <td colspan="5" th:switch="${task.isDone()}">
+                    <strike th:case="true" th:text="${task.getTask()}"></strike>
+                    <p th:case="false" th:text="${task.getTask()}"></p>
+                </td>
+                <td colspan="1">
+                    <form method="POST" th:action="@{/task/{id}/toggle(id=${task.getId()})}">
+                        <input type="submit" value="toggle">
+                    </form>
+
+                    <form method="POST" th:action="@{/task/{id}/delete(id=${task.getId()})}">
+                        <input type="submit" value="delete">
+                    </form>
+                </td>
             </tr>
         </th:block>
+        <form th:object="${newTask}" method="POST" th:action="@{/list/{id}/add-task(id=${list.getId()})}">
+            <tr>
+                <td colspan="5"><input type="text" th:field="*{task}"/></td>
+                <td colspan="1"><input type="submit" value="add task"></td>
+            </tr>
+        </form>
     </table>
+    <form method="POST" th:action="@{/list/{id}/delete(id=${list.getId()})}">
+        <input type="submit" value="delete list">
+    </form>
+    <br/>
 </th:block>
 
+<h3>Add new task list</h3>
+<form th:object="${newTaskList}" method="POST" action="/list-add">
+    <table>
+        <tr>
+            <td><label>Name:</label></td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+    </table>
+
+    <input type="submit" value="add">
+</form>
 </body>
 </html>

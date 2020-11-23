@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="lab5">
-      <option name="deprecationWarnings" value="true" />
-      <option name="uncheckedWarnings" value="true" />
-      <parameters>
-        <parameter value="-Xcheckinit" />
-        <parameter value="-encoding" />
-        <parameter value="utf8" />
-        <parameter value="-source" />
-        <parameter value="1.7" />
-        <parameter value="-target" />
-        <parameter value="1.7" />
-      </parameters>
-    </profile>
+    <profile name="sbt 1" modules="lab5" />
   </component>
 </project>
