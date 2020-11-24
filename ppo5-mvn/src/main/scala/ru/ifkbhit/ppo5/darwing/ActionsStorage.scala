@@ -11,8 +11,6 @@ trait ActionsStorage[A] {
   def runActions(element: A): Unit = {
     require(storage != null)
     require(element != null)
-    println(s"Running ${storage.size} actions")
-
     storage.filter(_ != null).foreach(action => action(element))
   }
 }

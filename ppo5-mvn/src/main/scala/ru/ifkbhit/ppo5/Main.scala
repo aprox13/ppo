@@ -10,8 +10,8 @@ object Main {
     val vFile = new File(getClass.getClassLoader.getResource("vertices.graph").getPath)
     val mFile = new File(getClass.getClassLoader.getResource("matrix.graph").getPath)
 
-    //val api = AwtDrawingApi
-    val api = new JavaFxDrawingApi
+    val api = AwtDrawingApi
+//    val api = new JavaFxDrawingApi
 
     //val g = VerticesGraph(vFile, api, 200)
     val g = FullGraph(10, api, 200)
